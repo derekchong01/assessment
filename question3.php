@@ -15,6 +15,7 @@ $days = floor($day_diff / (60 * 60 * 24));  // Convert seconds to days
 echo "The difference between today and 1st October 2024: $days <br>";
 
 // Check if the number of days is odd or even
+// References Used:https://www.youtube.com/watch?v=4VxDSrWJvcY
 if ($days % 2 == 0) {
     echo "The number of days is $days so the answer is even.";
 } else {
