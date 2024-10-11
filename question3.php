@@ -5,7 +5,7 @@
 <?php
 // Write a function:
 // How Can We Know The Number Of Days Between Two Given Dates Using PHP? Is The Day Odd Or Even. (This question can be played in any form freely)
-
+// References used:https://www.youtube.com/watch?v=r4idIlKR5ZI
 $to_date = time();  
 $from_date = strtotime("2024-10-01");  // Timestamp for October 1, 2024
 $day_diff = $to_date - $from_date;  // Difference in seconds
