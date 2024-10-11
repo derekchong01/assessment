@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: lightblue url("img_tree.gif") no-repeat fixed center;
+    }
+    p {
+        font-size: 18px;
+    }
+</style>
 <body>
-
 <?php
 
 // Define item rarity and VIP ranks
@@ -38,7 +46,7 @@ function roll_item($vip_rank) {
 }
 
 // Function to roll items for each VIP rank
-function roll_items_for_vips($num_rolls = 100) {
+function roll_rounds($num_rolls = 100) {
     global $vip_rank, $item_tier_rarity;
 
     // Initialize the results array to store counts for each VIP rank
@@ -69,7 +77,7 @@ function roll_items_for_vips($num_rolls = 100) {
 }
 
 // Call the function to roll items
-roll_items_for_vips();
+roll_rounds();
 
 ?>
 
