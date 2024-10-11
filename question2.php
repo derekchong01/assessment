@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: lightblue url("img_tree.gif") no-repeat fixed center;
+    }
+    p {
+        font-size: 18px;
+    }
+ </style>
 <body>
 
 <?php
@@ -11,7 +20,7 @@ function checkDiscount($purchaseValue) {
 // Initialize the message variable
     $message = '';
 
-    // Using Conditional statement to determine the value to see if have discount
+    // Using conditional statement to determine the value to see if have discount
     if ($purchaseValue >= 500) {
         $message = "Purchase Value is $purchaseValue, discount is 10%.";
     } elseif ($purchaseValue >= 100) {
@@ -20,10 +29,10 @@ function checkDiscount($purchaseValue) {
         $message = "Purchase Value is $purchaseValue, there are no discounts.";
     }
 
-    return $message;  // Return the message instead of echoing it
+    return $message;  // Return the message instead of echo it
 }
 
-// To display the value result to determine if theres discount
+// To displya the value result to determine if there discount
 echo checkDiscount(80) . "<br>"; 
 echo checkDiscount(300) . "<br>";   
 echo checkDiscount(500) . "<br>";  
