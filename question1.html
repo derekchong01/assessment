@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script>
-// Jack operates a photo-sharing website where users can upload and download images. 
+//Jack operates a photo-sharing website where users can upload and download images. 
 //Non-members are restricted from downloading images if they have downloaded another image within the past 5 seconds.
 //In contrast, members are allowed to download two images consecutively without any waiting period. However, for their third download and beyond, they must wait 5 seconds since their last download, similar to non-members.
 	</script>
-	
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: lightblue url("img_tree.gif") no-repeat fixed center;
+    }
+    p {
+        font-size: 18px;
+    }
+ </style>	
     <title>Download Checker</title>
     <script>
-        function checkDownload() {
+        function downloadChecker() {
             const memberType = document.getElementById('memberType').value;
 
             // to request the PHP script
@@ -39,7 +47,7 @@
         <option value="nonmember">Non-Member</option>
         <option value="member">Member</option>
     </select>
-    <button onclick="checkDownload()">Download</button>
+    <button onclick="downloadChecker()">Download</button>
     <p id="response"></p>
 </body>
 </html>
