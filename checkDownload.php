@@ -19,7 +19,7 @@ function downloadChecker($memberType) {
 // Handle logic for non-members (for non-member only able to download once)
     if ($memberType === 'nonmember') {
         if ($currentTime - $_SESSION['prev_download'] < $waitTime) {
-            return "Too many downloads. Please wait.";
+            return "Too many downloads.";
         }
 // Allow download for non-members
         $_SESSION['prev_download'] = $currentTime;
@@ -31,7 +31,7 @@ function downloadChecker($memberType) {
     if ($memberType === 'member') {
 // Check if the member must wait
         if ($_SESSION['download_count'] >= 2 && $currentTime - $_SESSION['prev_download'] < $waitTime) {
-            return "Too many downloads. Please wait.";
+            return "Too many downloads.";
         }
 
 // If the member wait more than 5 seconds, the download count will be reset
