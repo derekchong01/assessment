@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 <body>
-
-<?php
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: lightblue url("img_tree.gif") no-repeat fixed center;
+    }
+    p {
+        font-size: 18px;
+    }
+    </style>
+	<script>
+// Question 3	
 // Write a function:
 // How Can We Know The Number Of Days Between Two Given Dates Using PHP? Is The Day Odd Or Even. (This question can be played in any form freely)
-// References used:https://www.youtube.com/watch?v=r4idIlKR5ZI
+	</script>
+<?php
+
 $to_date = time();  
 $from_date = strtotime("2024-10-01");  // Timestamp for October 1, 2024
 $day_diff = $to_date - $from_date;  // Difference in seconds
@@ -15,7 +26,6 @@ $days = floor($day_diff / (60 * 60 * 24));  // Convert seconds to days
 echo "The difference between today and 1st October 2024: $days <br>";
 
 // Check if the number of days is odd or even
-// References Used:https://www.youtube.com/watch?v=4VxDSrWJvcY
 if ($days % 2 == 0) {
     echo "The number of days is $days so the answer is even.";
 } else {
