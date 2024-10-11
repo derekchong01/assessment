@@ -10,13 +10,13 @@
     }
  </style>
 <body>
-
-<?php
-function checkDiscount($purchaseValue) {
+<script>
 // Question 2
 //Kiki and Sam, who are good friends working in the catering industry, plan to implement a discount promotion in their POS system. The promotion offers a 10% discount for purchases over 500, a 5% discount for purchases under 500, but no discount for purchases below 100.
 // References Used:https://www.youtube.com/watch?v=BBQpJ_FqHiA
-
+</script>
+<?php
+function checkDiscount($purchaseValue) {
 // Initialize the message variable
     $message = '';
 
