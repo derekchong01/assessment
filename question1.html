@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+// Jack operates a photo-sharing website where users can upload and download images. 
+//Non-members are restricted from downloading images if they have downloaded another image within the past 5 seconds.
+//In contrast, members are allowed to download two images consecutively without any waiting period. However, for their third download and beyond, they must wait 5 seconds since their last download, similar to non-members.
+	</script>
+	
+    <title>Download Checker</title>
+    <script>
+        function checkDownload() {
+            const memberType = document.getElementById('memberType').value;
+
+            // to request the PHP script
+            fetch('checkDownload.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'memberType=' + encodeURIComponent(memberType)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('response').innerText = data;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Download Checker</h1>
+    <label for="memberType">Select Member Type:</label>
+    <select id="memberType">
+        <option value="nonmember">Non-Member</option>
+        <option value="member">Member</option>
+    </select>
+    <button onclick="checkDownload()">Download</button>
+    <p id="response"></p>
+</body>
+</html>
